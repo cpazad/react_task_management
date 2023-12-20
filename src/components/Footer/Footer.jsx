@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="flex flex-col sm:flex-row justify-between p-10 bg-neutral text-neutral-content">
+    <footer className="flex flex-col sm:flex-row justify-between bg-neutral text-neutral-content mt-auto">
       <div className="p-10 sm:w-1/2 flex flex-col justify-center items-center">
         <div className="bg-stone-100 py-3 rounded-full">
           <img src="logo.png" alt="logo" />
@@ -11,7 +11,7 @@ const Footer = () => {
         </h3>
         <p>Task Management Platform</p>
       </div>
-      <div className="p-10 sm:w-1/2 flex flex-col justify-center items-center">
+      <div className="p-10 sm:w-1/2 flex flex-col justify-center items-center bg-neutral-900">
         <header className="footer-title">Social</header>
         <div className="grid grid-flow-col gap-4">
           <a href="https://www.twitter.com/" target="_blank" rel="noreferrer">
