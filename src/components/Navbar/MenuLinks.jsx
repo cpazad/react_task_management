@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
-// import useAuth from "../../../Hooks/useAuth";
+import useAuth from "../../Hooks/useAuth";
+
 
 const MenuLinks = () => {
   const linkStyle = {
     margin: "10px",
   };
-//   const { user } = useAuth();
+    const { user } = useAuth();
   return (
     <>
       <i>
@@ -23,12 +24,12 @@ const MenuLinks = () => {
       <i>
         <div style={linkStyle}>
           <NavLink
-            to="/allcontest/gaming"
+            to="/about"
             style={({ isActive }) => ({
               color: isActive ? "red" : "white",
             })}
           >
-            All Contests
+            About
           </NavLink>
         </div>
       </i>
@@ -43,20 +44,7 @@ const MenuLinks = () => {
                   color: isActive ? "red" : "white",
                 })}
               >
-                Pricing
-              </NavLink>
-            </div>
-          </i>
-
-          <i>
-            <div style={linkStyle}>
-              <NavLink
-                to="/leaderboard"
-                style={({ isActive }) => ({
-                  color: isActive ? "red" : "white",
-                })}
-              >
-                Leaderboard
+                Dashboard
               </NavLink>
             </div>
           </i>
@@ -75,18 +63,6 @@ const MenuLinks = () => {
           </NavLink>
         </div>
       </i>
-      {/* <i>
-        <div style={linkStyle}>
-          <NavLink
-            to="/test"
-            style={({ isActive }) => ({
-              color: isActive ? "red" : "white",
-            })}
-          >
-            Test
-          </NavLink>
-        </div>
-      </i> */}
     </>
   );
 };
