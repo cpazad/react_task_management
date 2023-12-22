@@ -82,12 +82,12 @@ const Navbar = () => {
                     <i className="bg-black hover:bg-red-500 hover:text-white rounded-full my-1">
                       <div style={linkStyle}>
                         <NavLink
-                          to="/dashboard"
+                         to="/dashboard/task-manager"
                           style={({ isActive }) => ({
                             color: isActive ? "white" : "white",
                           })}
                         >
-                          Dashboard
+                          Task Manager 
                         </NavLink>
                       </div>
                     </i>

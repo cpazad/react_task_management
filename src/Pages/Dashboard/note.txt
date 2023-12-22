@@ -1,0 +1,43 @@
+<DragDropContext onDragEnd={onDragEnd}>
+          <div className="app-container">
+            <Droppable droppableId="todos" direction="horizontal">
+              {(provided) => (
+                <div
+                  {...provided.droppableProps}
+                  ref={provided.innerRef}
+                  className="column"
+                >
+                  <h2>To-Do</h2>
+                  {tasks.map((task, index) => (
+                    <Draggable
+                      key={task.id}
+                      draggableId={task.id}
+                      index={index}
+                    >
+                      {(provided) => (
+                        <div
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                          ref={provided.innerRef}
+                          className="task text-white border border-white"
+                        >
+                          <span>{task.content}</span>
+                          <button onClick={() => deleteTask(task.id)}>
+                            Delete
+                          </button>
+                        </div>
+                      )}
+                    </Draggable>
+                  ))}
+                  {provided.placeholder}
+                </div>
+              )}
+            </Droppable>
+
+            {/* In-Progress Column */}
+            {/* (Similar structure to 'To-Do' column) */}
+
+            {/* Completed Column */}
+            {/* (Similar structure to 'To-Do' column) */}
+          </div>
+        </DragDropContext>

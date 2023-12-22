@@ -8,6 +8,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import TaskManager from "../Pages/Dashboard/TaskManager";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Login/Registration";
+import TodoApp from "../Pages/Dashboard/TodoApp";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
                     {
                         path:"task-manager",
                         element:<TaskManager></TaskManager>
+                    },
+                    {
+                        path:"to-do-app",
+                        element:<TodoApp></TodoApp>
                     }
                 ]
             }

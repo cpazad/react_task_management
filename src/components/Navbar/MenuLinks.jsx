@@ -39,12 +39,12 @@ const MenuLinks = () => {
           <i>
             <div style={linkStyle}>
               <NavLink
-                to="/dashboard"
+                to="/dashboard/task-manager"
                 style={({ isActive }) => ({
                   color: isActive ? "red" : "white",
                 })}
               >
-                Dashboard
+                Task Manager
               </NavLink>
             </div>
           </i>
